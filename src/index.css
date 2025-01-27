@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body{
+  background-color: #131129;
+  color: white;
+  
+}
+
+.navbar{
+  background: #1D1932;
+
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
