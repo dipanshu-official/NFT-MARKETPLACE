@@ -17,3 +17,50 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Define Theme Variables */
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: #4a90e2;
+}
+
+.dark {
+  --bg-color: #131129;
+  --text-color: white;
+  --primary-color: #bb86fc;
+}
+
+/* Apply Variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.backgroundimg{
+  background-image: url('./assets/Homepage/Discover.png');
+  background-size: cover;
+    background-position: center;
+  
+    width: 595px;
+height: 228px;
+top: 130px;
+left: 150px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.btn-bg{
+  background: #6F4FF2;
+
+}
+
+.btn-bg2{
+  background: #DC3546;
+
+}
+
