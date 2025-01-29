@@ -1,4 +1,5 @@
 import React from 'react';
+import imageUrl from '../../assets/Homepage/NFTcard/Card.png';
 const NftCard = ({
   imageUrl,
   title,
@@ -7,8 +8,8 @@ const NftCard = ({
   minBid
 }) => {
   return (
-    <div className="w-[280px] bg-[#1A1F2C] rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
-      <div className="relative">
+    <div className="w-[280px] navbar p-4 rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+      <div className="relative ">
         <img 
           src={imageUrl} 
           alt={title}
@@ -16,7 +17,7 @@ const NftCard = ({
         />
       </div>
       
-      <div className="p-4">
+      <div className="">
         <h3 className="text-white text-xl font-semibold mb-4">{title}</h3>
         
         <div className="flex justify-between mb-3">
@@ -35,7 +36,7 @@ const NftCard = ({
           </div>
         </div>
         
-        <button className="w-full bg-[#9b87f5] hover:bg-[#8670f4] text-white font-medium py-3 px-4 rounded-xl transition-colors duration-200">
+        <button className="w-full btn-bg  text-white font-medium py-2 px- rounded-xl transition-colors duration-200">
           Place a Bid
         </button>
       </div>
