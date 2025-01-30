@@ -4,7 +4,9 @@ import img2 from '../assets/Dashboard/Note.png'
 import img3 from '../assets/Dashboard/wallet.png'
 import img4 from '../assets/Dashboard/chart.png'
 import img5 from '../assets/Dashboard/Chart.png'
-import { Bell } from 'lucide-react';
+import avtar from '../assets/Dashboard/Avatar.png'
+import { FollowButton } from '../components/FollowButton'
+
 const DashboardPage = () => {
   const iteams = [
     {
@@ -17,14 +19,14 @@ const DashboardPage = () => {
     },
     {
 
-      icon: img1,
+      icon: img2,
       data: "89",
       name: "Auction",
       percent: "+168.001%"
     },
     {
 
-      icon: img1,
+      icon: img3,
       data: "82K",
       name: "Creaters",
       percent: "+168.001%"
@@ -38,21 +40,21 @@ const DashboardPage = () => {
       action: "Purchase by you for",
       amount: "0.05 ETH",
       timestamp: "12 mins ago",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
+      avatar: avtar
     },
     {
       id: 2,
       username: "Papaya",
       action: "0.06ETH Received",
       timestamp: "12 mins ago",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
+      avatar: avtar
     },
     {
       id: 3,
       username: "Papaya",
       action: "Started Following you",
       timestamp: "12 mins ago",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
+      avatar: avtar
     },
     {
       id: 4,
@@ -60,7 +62,7 @@ const DashboardPage = () => {
       action: "Has been sold by",
       amount: "12.75ETH",
       timestamp: "12 mins ago",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
+      avatar: avtar
     },
     {
       id: 5,
@@ -68,11 +70,11 @@ const DashboardPage = () => {
       action: "Purchase by you for",
       amount: "0.05 ETH",
       timestamp: "12 mins ago",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
+      avatar: avtar
     }
   ];
   return (
-    <div className='mx-16'>
+    <div className='mx-14'>
 
       <div className=' flex justify-around items-start gap-10'>
         <div>
@@ -120,7 +122,7 @@ const DashboardPage = () => {
       {/* Notification section */}
 
 
-      <div className="  flex items-center justify-start p-4">
+      <div className="  flex items-center justify-start gap-6   p-4">
         <div className="w-full max-w-md  rounded-xl shadow-lg overflow-hidden">
           <div className="p-4  flex justify-between items-center">
             <div className="flex items-center space-x-2">
@@ -131,9 +133,9 @@ const DashboardPage = () => {
             </button>
           </div>
 
-          <div className="divide-y divide-gray-700 navbar mt-5 rounded-2xl">
+          <div className=" navbar mt-5 rounded-2xl">
             {notifications.map((notification) => (
-              <div key={notification.id} className="flex items-center space-x-4 p-4 hover:bg-gray-700/50 transition-colors">
+              <div key={notification.id} className="flex items-center space-x-4 p-4 ">
                 <img
                   src={notification.avatar}
                   alt={notification.username}
@@ -142,7 +144,7 @@ const DashboardPage = () => {
                 <div className="flex-1 min-w-0">
                   <p className="text-sm text-gray-200">
                     <span className="font-medium">{notification.username}</span>
-                    {' '}{notification.action}{' '}
+                    {' '}{notification.action}{''}
                     {notification.amount && (
                       <span className="text-purple-400">{notification.amount}</span>
                     )}
@@ -155,6 +157,26 @@ const DashboardPage = () => {
             ))}
           </div>
         </div>
+        {/* Top Creaters */}
+
+        <div className='flex flex-col gap-6'>
+          <h1 className='font-bold text-xl mt-2'> Top Creators</h1>
+          <div className="flex items-center justify-center p-4 ">
+
+            <div className="grid grid-cols-2 gap-8 " >
+              {Array(8).fill().map((_, index) => (
+                <FollowButton
+                  key={index}
+                  name="Papaya"
+                  itemCount={60}
+                  imageUrl=  {avtar}
+                />
+              ))}
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
   )

@@ -8,17 +8,17 @@ const NftCard = ({
   minBid
 }) => {
   return (
-    <div className="w-[280px] navbar p-4 rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+    <div className="w-[250px] navbar p-4 rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
       <div className="relative ">
         <img 
           src={imageUrl} 
           alt={title}
-          className="w-full h-[200px] object-cover rounded-t-2xl"
+          className="w-full h-[170px] object-cover  rounded-2xl"
         />
       </div>
       
       <div className="">
-        <h3 className="text-white text-xl font-semibold mb-4">{title}</h3>
+        <h3 className="text-white mt-5 font-bold mb-4">{title}</h3>
         
         <div className="flex justify-between mb-3">
           <div className="text-gray-400 text-sm">Auction time</div>
@@ -36,7 +36,7 @@ const NftCard = ({
           </div>
         </div>
         
-        <button className="w-full btn-bg  text-white font-medium py-2 px- rounded-xl transition-colors duration-200">
+        <button className="w-full btn-bg text-sm text-white font-medium py-2  rounded-xl transition-colors duration-200">
           Place a Bid
         </button>
       </div>

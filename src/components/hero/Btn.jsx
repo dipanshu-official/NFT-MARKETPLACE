@@ -16,9 +16,9 @@ const   Btn = ({
 
     // Conditional styles based on color and size
     const colorStyles = {
-        primary: 'btn-bg text-white ',
+        primary: 'btn-bg text-sm text-white ',
         secondary: 'bg-gray-500 text-white hover:bg-gray-600',
-        danger: ' btn-bg2 text-white hover:bg-red-600',
+        danger: ' btn-bg2 text-white text-sm hover:bg-red-600',
         success: 'bg-green-500 text-white hover:bg-green-600',
     };
 

@@ -91,7 +91,7 @@ const Layout = () => {
                         <input
                             type="text"
                             placeholder="Search Here"
-                            className="navbar pl-10 pr-4 py-2 rounded-lg w-[300px] focus:outline-none focus:ring-2 focus:ring-primary"
+                            className="navbar pl-10 placeholder-gray-600 pr-4 py-2 rounded-lg w-[300px] focus:outline-none focus:ring-2 focus:ring-primary"
                         />
                     </div>
                     <div className="flex items-center space-x-4">
