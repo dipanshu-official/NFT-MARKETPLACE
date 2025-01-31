@@ -1,6 +1,8 @@
 import React from 'react';
-import imageUrl from '../../assets/Homepage/NFTcard/Card.png';
+
+
 const NftCard = ({
+  
   imageUrl,
   title,
   auctionTimeLeft,
