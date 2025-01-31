@@ -3,7 +3,7 @@ import React from 'react'
 export function FollowButton({ name, itemCount, imageUrl }) {
     return (
         <div className=" rounded-xl  flex items-center justify-between  ">
-            <div className="flex items-center gap-3 navbar px-4 py-2 rounded-xl">
+            <div className="flex items-center gap-3 navbar px-4 py-3 rounded-xl">
                 <img
                     src={imageUrl}
                     alt={`${name}'s profile`}
@@ -18,7 +18,7 @@ export function FollowButton({ name, itemCount, imageUrl }) {
                     <div>
                     <button className="  my-auto text-white px-4  rounded-lg border border-blue-700 font-medium">
                         <p>follow</p>
-                    </button>
+                    </button>   
                     </div>
                 </div>
             </div>

@@ -30,8 +30,8 @@ const SettingPage = () => {
           <p>Saved</p>
         </div>
       </div>
-      <div>
-        <ul className='flex items-center gap-4 mt-8 cursor-pointer'>
+      <div className='hidden md:block '>
+        <ul className='flex items-center gap-4 mt-8 cursor-pointer '>
           <li>Profile</li>
           <li>Application</li>
           <li>Security</li>
@@ -110,8 +110,7 @@ const SettingPage = () => {
                           <div className="relative">
 
                             <input
-                              type="password"
-                              name="password"
+                              type="text"
                               value={formData.password}
                               onChange={handleChange}
                               className="w-full bg-[#131129]  outline-none border-none    rounded-lg py-3 pl-4 pr-4 text-white "
@@ -167,9 +166,7 @@ const SettingPage = () => {
                       <div className="relative">
 
                         <input
-                          type="password"
-                          name="password"
-                          value={formData.password}
+                          type="text"
                           onChange={handleChange}
                           className="w-full bg-[#131129]  outline-none border-none    rounded-lg py-3 pl-4 pr-4 text-white "
                         />
@@ -181,10 +178,8 @@ const SettingPage = () => {
                       <div className="relative">
 
                         <input
-                          type="password"
-                          name="password"
-                          value={formData.password}
-                          onChange={handleChange}
+                          type="text"
+
                           className="w-full bg-[#131129]  outline-none border-none    rounded-lg py-3 pl-4 pr-4 text-white "
                         />
                       </div>
@@ -197,9 +192,7 @@ const SettingPage = () => {
                       <div className="relative">
 
                         <input
-                          type="password"
-                          name="password"
-                          value={formData.password}
+                          type="text"
                           onChange={handleChange}
                           className="w-full bg-[#131129]  outline-none border-none    rounded-lg py-3 pl-4 pr-4 text-white "
                         />
@@ -211,9 +204,7 @@ const SettingPage = () => {
                       <div className="relative">
 
                         <input
-                          type="password"
-                          name="password"
-                          value={formData.password}
+                          type="text"
                           onChange={handleChange}
                           className="w-full bg-[#131129]  outline-none border-none    rounded-lg py-3 pl-4 pr-4 text-white "
                         />
@@ -225,9 +216,7 @@ const SettingPage = () => {
                       <div className="relative">
 
                         <input
-                          type="password"
-                          name="password"
-                          value={formData.password}
+                          type="text"
                           onChange={handleChange}
                           className="w-full bg-[#131129]  outline-none border-none    rounded-lg py-3 pl-4 pr-4 text-white "
                         />
@@ -236,7 +225,7 @@ const SettingPage = () => {
                   </div>
 
                 </div>
-                  <button className="btn-bg  cursor-pointer    text-white px-8 py-2 rounded-lg flex items-center gap-2 transition-colors">
+                  <button className="btn-bg cursor-pointer text-white px-8 py-2 rounded-lg flex items-center gap-2  ">
                     Save
                   </button>
               </div>

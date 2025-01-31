@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/DashboardPage.jsx';
 import Layout from './components/Layout';
 import { ThemeProvider } from './ThemeContext/ThemeContext.jsx'; // Import ThemeProvider
 import DashboardPage from './pages/DashboardPage.jsx';
@@ -18,8 +16,7 @@ const App = () => {
                 <Routes>
                     {/* Routes with the Layout */}
                     <Route element={<Layout />}>
-                        <Route  path="/" element={<HomePage />} />
-                        <Route  path="/dashboard" element={<DashboardPage/>} />
+                        <Route  path="/" element={<DashboardPage/>} />
                         <Route path= "/bid"   element={<BidPage/>} />
                         < Route path= "/saved" element={<SavedPage/>} />
                         < Route path= "/collection" element={<CollectionPage/>} />

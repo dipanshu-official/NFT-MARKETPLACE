@@ -29,7 +29,8 @@ const SavedPage = () => {
       </div>
       <div className='mt-10'>
 
-        <div className="grid grid-cols-4 gap-6 justify-center items-center place-items-center">
+      <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center place-items-center">
+
           {nftCards.map((card) => (
             <NftCard
               key={card.id}

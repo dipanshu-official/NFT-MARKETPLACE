@@ -3,7 +3,7 @@ import NftCard from '../components/hero/NftCard'
 import img1 from '../assets/Homepage/NFTcard/Card.png';
 
 
-const CollectionPage= () => {
+const CollectionPage = () => {
   // Generating NFT card data dynamically
   const nftCards = new Array(8).fill(null).map((_, index) => ({
     id: index,
@@ -28,8 +28,8 @@ const CollectionPage= () => {
         </div>
       </div>
       <div className='mt-10'>
+        <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center place-items-center">
 
-        <div className="grid grid-cols-4 gap-6 justify-center items-center place-items-center">
           {nftCards.map((card) => (
             <NftCard
               key={card.id}
