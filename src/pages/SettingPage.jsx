@@ -17,7 +17,7 @@ const SettingPage = () => {
     });
   };
   return (
-    <div className='mx-14'>
+    <div className='min-h-screen px-[70px]'>
       <div className='flex items-center justify-between '>
         <div>
 

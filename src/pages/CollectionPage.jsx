@@ -14,8 +14,8 @@ const CollectionPage = () => {
     minBid: `${(Math.random() * 3 + 0.5).toFixed(2)} ETH`,
   }));
   return (
-    <div className='mx-14 '>
-      <div className='flex items-center justify-between '>
+      <div className='max-w-screen-2xl mx-auto px-[70px]'>
+        <div className='flex items-center justify-between '>
         <div>
 
           <h1 className='font-bold'>Collections</h1>
@@ -28,7 +28,7 @@ const CollectionPage = () => {
         </div>
       </div>
       <div className='mt-10'>
-        <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center place-items-center">
+        <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 ">
 
           {nftCards.map((card) => (
             <NftCard
@@ -41,9 +41,6 @@ const CollectionPage = () => {
             />
           ))}
         </div>
-
-
-
       </div>
     </div>
   )

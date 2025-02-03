@@ -16,13 +16,12 @@ const App = () => {
                 <Routes>
                     {/* Routes with the Layout */}
                     <Route element={<Layout />}>
-                        <Route  path="/" element={<DashboardPage/>} />
-                        <Route path= "/bid"   element={<BidPage/>} />
-                        < Route path= "/saved" element={<SavedPage/>} />
-                        < Route path= "/collection" element={<CollectionPage/>} />
-                        < Route path= "/profile" element={<ProfilePage/>} />
-                        < Route path= "/setting" element={<SettingPage/>} />
-
+                        <Route path="/" element={<DashboardPage />} />
+                        <Route path="/bid" element={<BidPage />} />
+                        < Route path="/saved" element={<SavedPage />} />
+                        < Route path="/collection" element={<CollectionPage />} />
+                        < Route path="/profile" element={<ProfilePage />} />
+                        < Route path="/setting" element={<SettingPage />} />
                     </Route>
                 </Routes>
             </Router>

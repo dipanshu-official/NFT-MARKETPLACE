@@ -9,7 +9,16 @@ import img3 from '../assets/Dashboard/wallet.png'
 import img4 from '../assets/Dashboard/chart.png'
 import img5 from '../assets/Dashboard/Chart.png'
 import avtar2 from '../assets/Dashboard/Avatar.png'
+import nft1 from '../assets/Dashboard/TrendingBids/NFT.png'
+import nft2 from '../assets/Dashboard/TrendingBids/NFT2.png'
+import nft3 from '../assets/Dashboard/TrendingBids/NFT3.png'
+import nft4 from '../assets/Dashboard/TrendingBids/NFT4.png'
+import nft5 from '../assets/Dashboard/TrendingBids/NFT5.png'
+import dp from '../assets/Dashboard/TrendingBids/avatar.png'
+
+
 import { FollowButton } from '../components/FollowButton'
+import { X } from 'lucide-react';
 
 import NftCard from "../components/hero/NftCard.jsx";
 
@@ -91,10 +100,56 @@ const Dashboard = () => {
     }
   ];
 
+  const nftData = [
+    {
+      title: "Cute Cube Cool",
+      creator: "John Abraham",
+      profile: nft1,
+      price: "0.0025 ETH",
+      bidPrice: "0.0025 ETH",
+      timeLeft: "2 Hours 1 min 30s"
+    },
+    {
+      title: "Liquid Wave",
+      creator: "John Abraham",
+      profile: nft2,
+      price: "0.0025 ETH",
+      bidPrice: "0.0025 ETH",
+      timeLeft: "2 Hours 1 min 30s"
+    },
+    {
+      title: "Cute Cube Cool",
+      creator: "John Abraham",
+      profile: nft3,
+
+      price: "0.0025 ETH",
+      bidPrice: "0.0025 ETH",
+      timeLeft: "2 Hours 1 min 30s"
+    },
+    {
+      title: "Cute Cube Cool",
+      creator: "John Abraham",
+      profile: nft4,
+
+      price: "0.0025 ETH",
+      bidPrice: "0.0025 ETH",
+      timeLeft: "2 Hours 1 min 30s"
+    },
+    {
+      title: "Cute Cube Cool",
+      creator: "John Abraham",
+      profile: nft5,
+
+      price: "0.0025 ETH",
+      bidPrice: "0.0025 ETH",
+      timeLeft: "2 Hours 1 min 30s"
+    }
+  ]
+
   return (
     <>
       {/* Header Section */}
-      <div className="md:mx-14 sm:mx-8 mx-4 ">
+      <div className="min-h-screen px-[70px]">
 
         <div className="flex  items-center justify-between gap-12  ">
           <div className="backgroundimg  rounded-xl">
@@ -149,7 +204,7 @@ const Dashboard = () => {
         </div >
 
         {/* NFT Cards Section */}
-        <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 justify-center items-center place-items-center">
+        <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 ">
           {nftCards.map((card) => (
             <NftCard
               key={card.id}
@@ -205,11 +260,11 @@ const Dashboard = () => {
 
         </div>
 
-
+            
         {/* Notification section */}
 
 
-        <div className="  flex items-center justify-start gap-6   p-4">
+        <div className="  flex items-center justify-start gap-6 ">
           <div className="w-full max-w-md  rounded-xl shadow-lg overflow-hidden">
             <div className="p-4  flex justify-between items-center">
               <div className="flex items-center space-x-2">
@@ -264,6 +319,67 @@ const Dashboard = () => {
 
           </div>
 
+        </div>
+
+        {/* trending bids section Here  */}
+
+
+        <div className="mt-6">
+          <div className=" mx-auto space-y-4">
+            {nftData.map((nft, index) => (
+              <div
+                key={index}
+                className="navbar rounded-xl p-4 flex items-center justify-center  "
+              >
+                <div className="flex items-center space-x-6">
+                  <input
+                    type="checkbox"
+                    className="w-5 h-5 rounded border-gray-600 text-indigo-600 focus:ring-indigo-500 bg-transparent cursor-pointer"
+                  />
+                  <div className="w-16 h-16 rounded-lg overflow-hidden">
+                    <img
+                      src={nft.profile}
+                      alt={nft.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold">{nft.title}</h3>
+                    <p className="text-gray-400 text-sm">{nft.creator}</p>
+                  </div>
+
+                  <div className="flex items-center space-x-8">
+                    <div className="text-center">
+                      <p className="text-gray-400 text-sm">Price</p>
+                      <p className="text-white font-medium">{nft.price}</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-gray-400 text-sm">Highest Bid</p>
+                      <p className="text-white font-medium">{nft.bidPrice}</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={dp}
+                        alt="Bidder"
+                        className="w-8 h-8 rounded-full"
+                      />
+                      <div className="text-center">
+                        <p className="text-white font-medium">{nft.bidPrice}</p>
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-gray-400 text-sm">Ending In</p>
+                      <p className="text-white font-medium">{nft.timeLeft}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button className="absolute right-4 top-4 text-gray-400 hover:text-white transition-colors">
+                  <X size={16} />
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
