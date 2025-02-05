@@ -171,7 +171,7 @@ const Dashboard = () => {
           {/* NFT Showcase Section */}
           <div className="">
 
-            <div className="flex items-center navbar w-[500px]  h-[200px] gap-4 p-4   rounded-xl">
+            <div className="flex items-center navbar w-[px]  h-[200px] gap-4 p-4   rounded-xl">
               <div className="p-4 w-auto">
                 <img src={img} alt="NFT Display" className="" />
               </div>
@@ -260,7 +260,7 @@ const Dashboard = () => {
 
         </div>
 
-            
+
         {/* Notification section */}
 
 
@@ -326,17 +326,37 @@ const Dashboard = () => {
 
         <div className="mt-6">
           <div className=" mx-auto space-y-4">
+            <h1 className="font-bold text-xl">Active Bids</h1>
+            <div className="flex items-center justify-start w-full  ">
+              <input
+                type="checkbox"
+                className="w-5 h-5 rounded border-gray-600  bg-transparent cursor-pointer"
+              />
+              <div>
+                <ul className="flex items-center justify-evenly space-x-20 ">
+                  <li>Item List</li>
+                  <li>Open Price </li>
+                  <li>Your Offer</li>
+                  <li>Recent Offer</li>
+                  <li>Time Left</li>
+                  <li>Action</li>
+
+                </ul>
+              </div>
+
+            </div>
             {nftData.map((nft, index) => (
               <div
                 key={index}
-                className="navbar rounded-xl p-4 flex items-center justify-center  "
+                className="navbar rounded-xl p-2 flex items-center justify-around"
               >
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center justify-evenly space-x-20">
+
                   <input
                     type="checkbox"
-                    className="w-5 h-5 rounded border-gray-600 text-indigo-600 focus:ring-indigo-500 bg-transparent cursor-pointer"
+                    className="w-5 h-5 rounded border-gray-600  bg-transparent cursor-pointer"
                   />
-                  <div className="w-16 h-16 rounded-lg overflow-hidden">
+                  <div className="w-15 h-12 rounded-lg overflow-hidden">
                     <img
                       src={nft.profile}
                       alt={nft.title}
@@ -374,7 +394,7 @@ const Dashboard = () => {
                   </div>
                 </div>
 
-                <button className="absolute right-4 top-4 text-gray-400 hover:text-white transition-colors">
+                <button className=" text-gray-400 hover:text-white transition-colors">
                   <X size={16} />
                 </button>
               </div>

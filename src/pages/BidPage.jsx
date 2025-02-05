@@ -61,16 +61,16 @@ import { FollowButton } from '../components/FollowButton'
       <div className="flex  justify-around items-center " >
         {
           iteams.map((item, index) => (
-            <div key={index} className='navbar flex  gap-5 py-4 rounded-2xl mt-5 px-6 pr-15  items-center' >
+            <div key={index} className='navbar flex  gap-5 py-2 rounded-2xl mt-5 px-6 pr-25  items-center' >
 
-              <div className='  bg-[#6F4FF2] rounded-full flex items-center p-6'>
+              <div className='  bg-[#6F4FF2] rounded-full flex items-center p-4'>
                 <img src={img1} alt="" />
               </div>
               <div className='flex-col items-center justify-center'>
                 <h1 className='font-bold text-2xl'>{item.data}</h1>
                 <p className='text-sm text-[#68676E]'> Artworks</p>
               </div>
-              <h3>+168.001%</h3>
+
             </div>
           ))
         }
