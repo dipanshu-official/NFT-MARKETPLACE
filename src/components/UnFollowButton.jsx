@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function FollowButton({ name, itemCount, imageUrl }) {
+export function UnFollowButton({ name, itemCount, imageUrl }) {
     return (
         <div className=" rounded-xl  flex items-center justify-between  ">
             <div className="flex items-center gap-3 navbar px-4 py-3 rounded-xl">
@@ -16,8 +16,8 @@ export function FollowButton({ name, itemCount, imageUrl }) {
                         <p className="text-gray-400 text-sm">{itemCount} Items</p>
                     </div>
                     <div>
-                    <button className="  my-auto cursor-pointer text-white px-4  rounded-lg border border-blue-700 font-medium">
-                        <p>follow</p>
+                    <button className="  my-auto text-white px-2 cursor-pointer rounded-lg outline-none bg-[#DC3546] font-medium">
+                        <p>unfollow</p>
                     </button>   
                     </div>
                 </div>

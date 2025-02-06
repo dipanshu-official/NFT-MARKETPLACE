@@ -14,7 +14,7 @@ const CollectionPage = () => {
     minBid: `${(Math.random() * 3 + 0.5).toFixed(2)} ETH`,
   }));
   return (
-      <div className='max-w-screen-2xl mx-auto px-[70px]'>
+      <div className='max-w-screen-2xl mx-auto md:px-[70px] px-[20px]'>
         <div className='flex items-center justify-between '>
         <div>
 

@@ -10,7 +10,7 @@ const NftCard = ({
   minBid
 }) => {
   return (
-    <div className="max-w-lg mx-auto gap-5 navbar p-4 rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+    <div className="max-w-lg mx-auto gap-5  dark:navbar white:bg-[#ffffff] p-4 rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
       <div className="relative ">
         <img 
           src={imageUrl} 

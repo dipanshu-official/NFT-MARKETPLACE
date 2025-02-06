@@ -149,7 +149,7 @@ const Dashboard = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="min-h-screen px-[70px]">
+      <div className="min-h-screen md:px-[70px] px-[20px]">
 
         <div className="flex  items-center justify-between gap-12  ">
           <div className="backgroundimg  rounded-xl">
@@ -324,83 +324,64 @@ const Dashboard = () => {
         {/* trending bids section Here  */}
 
 
-        <div className="mt-6">
-          <div className=" mx-auto space-y-4">
-            <h1 className="font-bold text-xl">Active Bids</h1>
-            <div className="flex items-center justify-start w-full  ">
-              <input
-                type="checkbox"
-                className="w-5 h-5 rounded border-gray-600  bg-transparent cursor-pointer"
-              />
-              <div>
-                <ul className="flex items-center justify-evenly space-x-20 ">
-                  <li>Item List</li>
-                  <li>Open Price </li>
-                  <li>Your Offer</li>
-                  <li>Recent Offer</li>
-                  <li>Time Left</li>
-                  <li>Action</li>
-
-                </ul>
-              </div>
-
-            </div>
+        
+    <div className="mt-6">
+      <h1 className="font-bold text-xl mb-4">Active Bids</h1>
+      <div className="overflow-x-auto">
+        <table className="min-w-full rounded-lg">
+          <thead className=" text-white">
+            <tr>
+              <th className="p-3 text-left">
+                <input type="checkbox" className="w-5 h-5 cursor-pointer" />
+              </th>
+              <th className="p-3 text-left">Item List</th>
+              <th className="p-3 text-left">Open Price</th>
+              <th className="p-3 text-left">Your Offer</th>
+              <th className="p-3 text-left">Recent Offer</th>
+              <th className="p-3 text-left">Time Left</th>
+              <th className="p-3 text-left">Action</th>
+            </tr>
+          </thead>
+          <tbody>
             {nftData.map((nft, index) => (
-              <div
-                key={index}
-                className="navbar rounded-xl p-2 flex items-center justify-around"
-              >
-                <div className="flex items-center justify-evenly space-x-20">
 
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 rounded border-gray-600  bg-transparent cursor-pointer"
+              <tr
+                key={index}
+                className="navbar mt-12"
+              >
+                
+                <td className="p-3">
+                  <input type="checkbox" className="w-5 h-5 cursor-pointer" />
+                </td>
+                <td className="p-3 flex items-center space-x-3">
+                  <img
+                    src={nft.profile}
+                    alt={nft.title}
+                    className="w-12 h-12 rounded-lg object-cover"
                   />
-                  <div className="w-15 h-12 rounded-lg overflow-hidden">
-                    <img
-                      src={nft.profile}
-                      alt={nft.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
                   <div>
                     <h3 className="text-white font-semibold">{nft.title}</h3>
                     <p className="text-gray-400 text-sm">{nft.creator}</p>
                   </div>
-
-                  <div className="flex items-center space-x-8">
-                    <div className="text-center">
-                      <p className="text-gray-400 text-sm">Price</p>
-                      <p className="text-white font-medium">{nft.price}</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-gray-400 text-sm">Highest Bid</p>
-                      <p className="text-white font-medium">{nft.bidPrice}</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <img
-                        src={dp}
-                        alt="Bidder"
-                        className="w-8 h-8 rounded-full"
-                      />
-                      <div className="text-center">
-                        <p className="text-white font-medium">{nft.bidPrice}</p>
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-gray-400 text-sm">Ending In</p>
-                      <p className="text-white font-medium">{nft.timeLeft}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <button className=" text-gray-400 hover:text-white transition-colors">
-                  <X size={16} />
-                </button>
-              </div>
+                </td>
+                <td className="p-3 text-white font-medium">{nft.price}</td>
+                <td className="p-3 text-white font-medium">{nft.bidPrice}</td>
+                <td className="p-3 flex items-center  space-x-3">
+                  <img src={dp} alt="Bidder" className="w-8 h-8 rounded-full" />
+                  <p className="text-white font-medium">{nft.bidPrice}</p>
+                </td>
+                <td className="p-3 text-white  font-medium">{nft.timeLeft}</td>
+                <td className="p-3">
+                  <button className="text-gray-400 hover:text-white transition-colors">
+                    <X size={16} />
+                  </button>
+                </td>
+              </tr>
             ))}
-          </div>
-        </div>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
       </div>
     </>

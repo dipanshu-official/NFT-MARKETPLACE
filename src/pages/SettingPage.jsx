@@ -17,7 +17,7 @@ const SettingPage = () => {
     });
   };
   return (
-    <div className='min-h-screen px-[70px]'>
+    <div className='min-h-screen md:px-[70px] px-[20px] mb-20 md:mb-5'>
       <div className='flex items-center justify-between '>
         <div>
 
@@ -53,7 +53,7 @@ const SettingPage = () => {
                   <div className="navbar p-8 rounded-2xl mt-5 ">
                    
 
-                    <div className="space-y-4">
+                    <div className="space-y-4 ">
                       <div>
                         <label className="block text-gray-300 mb-2">Full Name</label>
                         <div className="relative">
