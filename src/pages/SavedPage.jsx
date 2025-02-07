@@ -2,7 +2,6 @@ import React from 'react'
 import NftCard from '../components/hero/NftCard'
 import img1 from '../assets/Homepage/NFTcard/Card.png';
 
-
 const SavedPage = () => {
   // Generating NFT card data dynamically
   const nftCards = new Array(8).fill(null).map((_, index) => ({
@@ -43,11 +42,9 @@ const SavedPage = () => {
           ))}
         </div>
 
-
-
       </div>
     </div>
   )
-}
+} 
 
-export default SavedPage
+export default SavedPage;

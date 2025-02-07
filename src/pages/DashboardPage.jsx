@@ -21,8 +21,10 @@ import { FollowButton } from '../components/FollowButton'
 import { X } from 'lucide-react';
 
 import NftCard from "../components/hero/NftCard.jsx";
+import { useTheme } from "../ThemeContext/ThemeContext.jsx";
 
 const Dashboard = () => {
+    const { theme, toggleTheme } = useTheme();
   // Generating NFT card data dynamically
   const nftCards = new Array(8).fill(null).map((_, index) => ({
     id: index,
@@ -171,7 +173,7 @@ const Dashboard = () => {
           {/* NFT Showcase Section */}
           <div className="">
 
-            <div className="flex items-center navbar w-[px]  h-[200px] gap-4 p-4   rounded-xl">
+            <div className={`flex items-center  w-[px] ${theme === "dark"?"navbar":"bg-amber-400"} h-[200px] gap-4 p-4   rounded-xl`}>
               <div className="p-4 w-auto">
                 <img src={img} alt="NFT Display" className="" />
               </div>
