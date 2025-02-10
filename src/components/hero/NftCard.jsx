@@ -19,7 +19,7 @@ const NftCard = ({ imageUrl, title, auctionTimeLeft, currentBid, minBid }) => {
       </div>
 
       <div className="">
-        <h3 className="text-white mt-5 font-bold mb-4">{title}</h3>
+        <h3 className={`${theme==="dark" ? "text-white" : "text-black"} mt-5 font-bold mb-4`}>{title}</h3>
 
         <div className="flex justify-between mb-3">
           <div className="text-gray-400 text-sm">Auction time</div>
