@@ -24,7 +24,7 @@ import NftCard from "../components/hero/NftCard.jsx";
 import { useTheme } from "../ThemeContext/ThemeContext.jsx";
 
 const Dashboard = () => {
-    const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   // Generating NFT card data dynamically
   const nftCards = new Array(8).fill(null).map((_, index) => ({
     id: index,
@@ -60,48 +60,6 @@ const Dashboard = () => {
       percent: "+168.001%"
     },
   ]
-
-  const notifications = [
-    {
-      id: 1,
-      username: "Papaya",
-      action: "Purchase by you for",
-      amount: "0.05 ETH",
-      timestamp: "12 mins ago",
-      avatar: avtar
-    },
-    {
-      id: 2,
-      username: "Papaya",
-      action: "0.06ETH Received",
-      timestamp: "12 mins ago",
-      avatar: avtar
-    },
-    {
-      id: 3,
-      username: "Papaya",
-      action: "Started Following you",
-      timestamp: "12 mins ago",
-      avatar: avtar
-    },
-    {
-      id: 4,
-      username: "Papaya",
-      action: "Has been sold by",
-      amount: "12.75ETH",
-      timestamp: "12 mins ago",
-      avatar: avtar
-    },
-    {
-      id: 5,
-      username: "Papaya",
-      action: "Purchase by you for",
-      amount: "0.05 ETH",
-      timestamp: "12 mins ago",
-      avatar: avtar
-    }
-  ];
-
   const nftData = [
     {
       title: "Cute Cube Cool",
@@ -148,21 +106,64 @@ const Dashboard = () => {
     }
   ]
 
+  const notifications = [
+    {
+      id: 1,
+      username: "Papaya",
+      action: "Purchase by you for",
+      amount: "0.05 ETH",
+      timestamp: "12 mins ago",
+      avatar: avtar
+    },
+    {
+      id: 2,
+      username: "Papaya",
+      action: "0.06ETH Received",
+      timestamp: "12 mins ago",
+      avatar: avtar
+    },
+    {
+      id: 3,
+      username: "Papaya",
+      action: "Started Following you",
+      timestamp: "12 mins ago",
+      avatar: avtar
+    },
+    {
+      id: 4,
+      username: "Papaya",
+      action: "Has been sold by",
+      amount: "12.75ETH",
+      timestamp: "12 mins ago",
+      avatar: avtar
+    },
+    {
+      id: 5,
+      username: "Papaya",
+      action: "Purchase by you for",
+      amount: "0.05 ETH",
+      timestamp: "12 mins ago",
+      avatar: avtar
+    }
+  ];
+
+
+
   return (
     <>
       {/* Header Section */}
       <div className="min-h-screen md:px-[70px] px-[20px]">
 
-        <div className="flex  items-center justify-between gap-12  ">
-          <div className="backgroundimg  rounded-xl">
-            <div className=" pt-7 pl-8">
-              <h1 className="font-bold w-[250px] text-2xl">
+        <div className=" grid md:grid-cols-2 grid-cols-1 items-center gap-12  ">
+          <div className="backgroundimg rounded-xl p-6">
+            <div className=" ">
+              <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-xs sm:max-w-sm md:max-w-md">
                 Discover, Collect, Sell and Create your NFT
               </h1>
-              <p className="text-xs text-gray-500 mt-3 ">
+              <p className="text-xs sm:text-sm md:text-base text-gray-500 mt-3 max-w-xs sm:max-w-sm">
                 Digital Marketplace for crypto collectibles and non-fungible tokens
               </p>
-              <div className="flex gap-2 mt-5">
+              <div className="flex flex-wrap gap-3 mt-5">
                 <Btn color="primary">Explore</Btn>
                 <Btn color="danger">Create</Btn>
               </div>
@@ -171,23 +172,37 @@ const Dashboard = () => {
 
 
           {/* NFT Showcase Section */}
-          <div className="">
+          <div className="w-full">
+            <div
+              className={`flex flex-col sm:flex-row items-center w-full ${theme === "dark" ? "navbar" : "bg-white"
+                } h-[228px] gap-4 p-6 rounded-xl`}
+            >
 
-            <div className={`flex items-center  w-[px] ${theme === "dark"?"navbar":"bg-amber-400"} h-[200px] gap-4 p-4   rounded-xl`}>
-              <div className="p-4 w-auto">
-                <img src={img} alt="NFT Display" className="" />
+
+              {/* Image Section */}
+              <div className="w-full sm:w-auto flex justify-center">
+                <img src={img} alt="NFT Display" className="w-auto rounded-2xl h-full   object-cover" />
               </div>
-              <div className="flex-col items-start">
-                <div className="flex items-center gap-2">
-                  <img src={avtar} alt="Creator Avatar" />
-                  <h2>John Abraham</h2>
-                </div>
-                <div className="mt-4 font-bold">
-                  <h1>Brighten LQ</h1>
-                </div>
-                <div className="flex mt-5 gap-4 ">
-                  <Btn color="primary" >Place</Btn>
-                  <Btn color="danger">Details</Btn>
+
+              <div className="flex-1">
+                {/* Content Section */}
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full">
+                  {/* Creator Info */}
+                  <div className="flex items-center gap-2">
+                    <img src={avtar} alt="Creator Avatar" className="w-8 h-8 rounded-full" />
+                    <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-sm sm:text-base font-semibold`}>John Abraham</h2>
+                  </div>
+
+                  {/* NFT Title */}
+                  <div className="mt-3 font-bold">
+                    <h1 className={`${theme === "dark" ? "text-white" : "text-black"} text-lg sm:text-xl`}>Brighten LQ</h1>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex flex-wrap justify-center sm:justify-start mt-5 gap-4">
+                    <Btn color="primary">Place</Btn>
+                    <Btn color="danger">Details</Btn>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,11 +212,11 @@ const Dashboard = () => {
 
         {/* Trending Bids Section */}
         < div className="flex justify-between items-center  mt-6 mb-8" >
-          <h2 className="text-2xl font-bold">Trending Bids</h2>
+          <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-2xl font-bold`}>Trending Bids</h2>
           <div className="flex ">
-            <button className="px-2 py-1 rounded-full text-sm">All</button>
-            <button className="text-white hover:bg-btn px-2 py-1 rounded-full text-sm">Artwork</button>
-            <button className="text-white hover:bg-btn px-2 py-1 rounded-full text-sm">Book</button>
+            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-2 py-1 rounded-full text-sm`}>All</button>
+            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-2 py-1 rounded-full text-sm`}>Artwork</button>
+            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-2 py-1 rounded-full text-sm`}>Book</button>
           </div>
         </div >
 
@@ -220,73 +235,68 @@ const Dashboard = () => {
         </div>
 
 
-        <div className=' flex justify-around items-start gap-10 mt-8'>
-          <div>
-            <h1 className='font-bold'>Trending Bids</h1>
-            {
-              iteams.map((item, index) => (
-                <div className='navbar flex gap-5 py-4 rounded-2xl mt-5 px-6 items-center' >
-
-                  <div className='  bg-[#6F4FF2] rounded-full flex items-center p-6'>
-                    <img src={img1} alt="" />
-                  </div>
-                  <div className='flex-col items-center justify-center'>
-                    <h1 className='font-bold text-2xl'>{item.data}</h1>
-                    <p className='text-sm text-[#68676E]'> Artworks</p>
-                  </div>
-                  <h3>+168.001%</h3>
+        <div className='flex flex-col md:flex-row justify-around items-start gap-5 md:gap-10 mt-8 w-full'>
+          <div className='w-full md:w-auto'>
+            <h1 className={`${theme === "dark" ? "text-white" : "text-black"}  font-bold`}>Trending Bids</h1>
+            {iteams.map((item, index) => (
+              <div key={index} className={`${theme === "dark" ? "navbar" : "bg-white"} flex flex-wrap md:flex-nowrap gap-3 md:gap-5 py-3 md:py-4 rounded-2xl mt-5 px-4 md:px-6 items-center`} >
+                <div className='bg-[#6F4FF2] rounded-full flex items-center p-4 md:p-6'>
+                  <img src={img1} alt="" className='w-full h-full object-contain' />
                 </div>
-              ))
-            }
-
-
-          </div>
-
-          <div>
-            <div>
-              <h1 className='font-bold'>ETH Price</h1>
-              <div className='navbar rounded-2xl mt-5 '>
-                <img src={img4} alt="" className='p-4' />
+                <div className='flex-col items-center justify-center'>
+                  <h1 className={`${theme === "dark" ? "text-white" : "text-black"} font-bold text-xl md:text-2xl`}>{item.data}</h1>
+                  <p className='text-sm text-[#68676E]'>Artworks</p>
+                </div>
+                <h3 className='ml-auto text-[#DC3546]'>+168.001%</h3>
               </div>
-            </div>
+            ))}
           </div>
-          <div>
+
+          <div className='w-full md:w-auto'>
             <div>
-              <h1 className='font-bold'>Statistics</h1>
+              <h1 className={`${theme === "dark" ? "text-white" : "text-black"}  font-bold`}>ETH Price</h1>
               <div className='navbar rounded-2xl mt-5'>
-                <img src={img5} alt="" className='px-5 pt-3 pb-12' />
+                <img src={img4} alt="" className='w-full p-2 md:p-4 object-contain' />
               </div>
             </div>
           </div>
 
-
+          <div className='w-full md:w-auto'>
+            <div>
+              <h1 className={`${theme === "dark" ? "text-white" : "text-black"}  font-bold`}>Statistics</h1>
+              <div className='navbar rounded-2xl mt-5'>
+                <img src={img5} alt="" className='w-full px-3 md:px-5 pt-2 md:pt-3 pb-8 md:pb-12 object-contain' />
+              </div>
+            </div>
+          </div>
         </div>
 
 
         {/* Notification section */}
 
 
-        <div className="  flex items-center justify-start gap-6 ">
-          <div className="w-full max-w-md  rounded-xl shadow-lg overflow-hidden">
-            <div className="p-4  flex justify-between items-center">
+        <div className="flex mt-6 flex-col md:flex-row items-start justify-start gap-4 md:gap-6">
+          {/* Recent Activity Section */}
+          <div className="w-full md:w-auto md:max-w-md rounded-xl  overflow-hidden">
+            <div className="p-4 flex justify-between items-center">
               <div className="flex items-center space-x-2">
-                <h2 className="text-lg font-semibold text-white">Recent Activity</h2>
+                <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-lg font-semibold`}>Recent Activity</h2>
               </div>
               <button className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
                 See more
               </button>
             </div>
 
-            <div className=" navbar mt-5 rounded-2xl">
+            <div className={`${theme === "dark" ? "navbar" : "bg-white"} mt-5 rounded-2xl`}>
               {notifications.map((notification) => (
-                <div key={notification.id} className="flex items-center space-x-4 p-4 ">
+                <div key={notification.id} className="flex items-center space-x-4 p-3 md:p-4">
                   <img
                     src={notification.avatar}
                     alt={notification.username}
-                    className="w-10 h-10 rounded-full object-cover"
+                    className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover"
                   />
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm text-gray-200">
+                    <p className={`${theme === "dark" ? "text-white" : "text-black"} text-sm`}>
                       <span className="font-medium">{notification.username}</span>
                       {' '}{notification.action}{''}
                       {notification.amount && (
@@ -301,13 +311,12 @@ const Dashboard = () => {
               ))}
             </div>
           </div>
-          {/* Top Creaters */}
 
-          <div className='flex flex-col gap-6'>
-            <h1 className='font-bold text-xl mt-2'> Top Creators</h1>
-            <div className="flex items-center justify-center  ">
-
-              <div className="grid grid-cols-2 gap-8 " >
+          {/* Top Creators Section */}
+          <div className='flex flex-col gap-4 md:gap-6 w-full md:w-auto mt-4'>
+            <h1 className={`${theme === "dark" ? "text-white" : "text-black"} text-lg font-bold  md:text-xl mt-2`}>Top Creators</h1>
+            <div className="flex items-center justify-center w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 w-full">
                 {Array(8).fill().map((_, index) => (
                   <FollowButton
                     key={index}
@@ -318,72 +327,70 @@ const Dashboard = () => {
                 ))}
               </div>
             </div>
-
           </div>
-
         </div>
 
         {/* trending bids section Here  */}
 
 
-        
-    <div className="mt-6">
-      <h1 className="font-bold text-xl mb-4">Active Bids</h1>
-      <div className="overflow-x-auto">
-        <table className="min-w-full rounded-lg">
-          <thead className=" text-white">
-            <tr>
-              <th className="p-3 text-left">
-                <input type="checkbox" className="w-5 h-5 cursor-pointer" />
-              </th>
-              <th className="p-3 text-left">Item List</th>
-              <th className="p-3 text-left">Open Price</th>
-              <th className="p-3 text-left">Your Offer</th>
-              <th className="p-3 text-left">Recent Offer</th>
-              <th className="p-3 text-left">Time Left</th>
-              <th className="p-3 text-left">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {nftData.map((nft, index) => (
 
-              <tr
-                key={index}
-                className="navbar mt-12"
-              >
-                
-                <td className="p-3">
-                  <input type="checkbox" className="w-5 h-5 cursor-pointer" />
-                </td>
-                <td className="p-3 flex items-center space-x-3">
-                  <img
-                    src={nft.profile}
-                    alt={nft.title}
-                    className="w-12 h-12 rounded-lg object-cover"
-                  />
-                  <div>
-                    <h3 className="text-white font-semibold">{nft.title}</h3>
-                    <p className="text-gray-400 text-sm">{nft.creator}</p>
-                  </div>
-                </td>
-                <td className="p-3 text-white font-medium">{nft.price}</td>
-                <td className="p-3 text-white font-medium">{nft.bidPrice}</td>
-                <td className="p-3 flex items-center  space-x-3">
-                  <img src={dp} alt="Bidder" className="w-8 h-8 rounded-full" />
-                  <p className="text-white font-medium">{nft.bidPrice}</p>
-                </td>
-                <td className="p-3 text-white  font-medium">{nft.timeLeft}</td>
-                <td className="p-3">
-                  <button className="text-gray-400 hover:text-white transition-colors">
-                    <X size={16} />
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+        <div className="mt-6">
+          <h1 className="font-bold text-xl mb-4">Active Bids</h1>
+          <div className="overflow-x-auto">
+            <table className="min-w-full rounded-lg">
+              <thead className=" text-white">
+                <tr>
+                  <th className="p-3 text-left">
+                    <input type="checkbox" className="w-5 h-5 cursor-pointer" />
+                  </th>
+                  <th className="p-3 text-left">Item List</th>
+                  <th className="p-3 text-left">Open Price</th>
+                  <th className="p-3 text-left">Your Offer</th>
+                  <th className="p-3 text-left">Recent Offer</th>
+                  <th className="p-3 text-left">Time Left</th>
+                  <th className="p-3 text-left">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {nftData.map((nft, index) => (
+
+                  <tr
+                    key={index}
+                    className="navbar mt-12"
+                  >
+
+                    <td className="p-3">
+                      <input type="checkbox" className="w-5 h-5 cursor-pointer" />
+                    </td>
+                    <td className="p-3 flex items-center space-x-3">
+                      <img
+                        src={nft.profile}
+                        alt={nft.title}
+                        className="w-12 h-12 rounded-lg object-cover"
+                      />
+                      <div>
+                        <h3 className="text-white font-semibold">{nft.title}</h3>
+                        <p className="text-gray-400 text-sm">{nft.creator}</p>
+                      </div>
+                    </td>
+                    <td className="p-3 text-white font-medium">{nft.price}</td>
+                    <td className="p-3 text-white font-medium">{nft.bidPrice}</td>
+                    <td className="p-3 flex items-center  space-x-3">
+                      <img src={dp} alt="Bidder" className="w-8 h-8 rounded-full" />
+                      <p className="text-white font-medium">{nft.bidPrice}</p>
+                    </td>
+                    <td className="p-3 text-white  font-medium">{nft.timeLeft}</td>
+                    <td className="p-3">
+                      <button className="text-gray-400 hover:text-white transition-colors">
+                        <X size={16} />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
 
       </div>
     </>

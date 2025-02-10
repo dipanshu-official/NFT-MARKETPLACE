@@ -6,9 +6,9 @@ const NftCard = ({ imageUrl, title, auctionTimeLeft, currentBid, minBid }) => {
 
   return (
     <div
-      className={`max-w-lg ${
-        theme === "dark" ? "navbar" : "bg-white"
-      } mx-auto gap-5 p-4 rounded-2xl overflow-hidden shadow-lg duration-300`}
+        className={`max-w-lg ${
+          theme === "dark" ? "navbar" : "bg-white"
+        } mx-auto gap-5 p-4 rounded-2xl overflow-hidden shadow-lg duration-300`}
     >
       <div className="relative">
         <img

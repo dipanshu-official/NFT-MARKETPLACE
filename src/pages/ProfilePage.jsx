@@ -5,10 +5,14 @@ import lock from '../assets/Profile/lock.png'
 import { UnFollowButton } from '../components/UnFollowButton';
 import image from '../assets/Homepage/NFTcard/Card.png';
 import Card from '../components/hero/Card';
+import { useTheme } from "../ThemeContext/ThemeContext.jsx";
+
 
 
 
 const ProfilePage = () => {
+      const { theme, toggleTheme } = useTheme();
+  
   const Cards = new Array(4).fill(null).map((_, index) => ({
     id: index,
     imageUrl: image,
@@ -24,23 +28,23 @@ const ProfilePage = () => {
       <div className='flex  items-center justify-between '>
         <div>
 
-          <h1 className='font-bold'>Saved Items</h1>
-          <p className='text-sm'>Welcome Saved Page</p>
+          <h1 className={`${theme==="dark" ? "text-white" : "text-black"} font-bold`}>Saved Items</h1>
+          <p className={`${theme==="dark" ? "text-white" : "text-black"} text-sm`}>Welcome Saved Page</p>
         </div>
-        <div className='flex gap-4 items-center'>
+        <div  className={`${theme==="dark" ? "text-white" : "text-black"} flex gap-4 items-center`}>
           <p>Home</p>
 
           <p>Saved</p>
         </div>
       </div>
       <div className='mt-5 flex flex-col lg:flex-row gap-5'>
-        <div className='navbar p-4 rounded-xl'>
+        <div className={`${theme==="dark" ? "navbar" : "bg-white"} p-4 rounded-xl`}>
           <div>
             <img src={avtar} alt='' />
           </div>
           <div className='flex flex-col mt-2'>
-            <h1 className='font-bold'>Welcome, John Smith</h1>
-            <p className='text-sm   '>
+            <h1 className={`${theme==="dark" ? "text-white" : "text-black"} font-bold`}>Welcome, John Smith</h1>
+            <p className={`${theme==="dark" ? "text-white" : "text-black"} text-sm`}>
               Looks like you are not verified yet. Verify yourself to use the full potential of Xtrader.
             </p>
           </div>
@@ -58,7 +62,7 @@ const ProfilePage = () => {
           </div>
         </div>
         <div className='mt-14'>
-          <h1 className='font-bold text-xl mt-2'>Following</h1>
+          <h1 className={`${theme==="dark" ? "text-white" : "text-black"} font-bold text-xl mt-2`}>Following</h1>
           <div className='flex items-center justify-center mt-2'>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
               {Array(4).fill().map((_, index) => (
@@ -71,7 +75,7 @@ const ProfilePage = () => {
 
       {/* Profile page end here  */}
       <div className='mt-4'>
-        <h1 className='font-bold ml-2 text-xl'>My bought</h1>
+        <h1 className={`${theme==="dark" ? "text-white" : "text-black"} font-bold ml-2 text-xl`}>My bought</h1>
         <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
           {Cards.map((card) => (
             <Card
@@ -86,7 +90,7 @@ const ProfilePage = () => {
       </div>
       {/* Card section end here  */}
       <div className='mt-4'>
-        <h1 className='font-bold ml-2 text-xl'>My Collection</h1>
+        <h1  className={`${theme==="dark" ? "text-white" : "text-black"} font-bold ml-2 text-xl`}>My Collection</h1>
         <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
           {Cards.map((card) => (
             <Card
@@ -99,8 +103,6 @@ const ProfilePage = () => {
           ))}
         </div>
       </div>
-
-
     </div>
 
 

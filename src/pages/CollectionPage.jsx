@@ -1,9 +1,13 @@
 import React from 'react'
 import NftCard from '../components/hero/NftCard'
 import img1 from '../assets/Homepage/NFTcard/Card.png';
+import { useTheme } from '../ThemeContext/ThemeContext';
+
 
 
 const CollectionPage = () => {
+      const { theme, toggleTheme } = useTheme();
+  
   // Generating NFT card data dynamically
   const nftCards = new Array(8).fill(null).map((_, index) => ({
     id: index,
@@ -18,10 +22,10 @@ const CollectionPage = () => {
         <div className='flex items-center justify-between '>
         <div>
 
-          <h1 className='font-bold'>Collections</h1>
-          <p className='text-sm'>Welcome Collections Page</p>
+          <h1 className={`${theme==="dark" ? "text-white" : "text-black"} font-bold`}>Collections</h1>
+          <p className={`${theme==="dark" ? "text-white" : "text-black"} text-sm`}>Welcome Collections Page</p>
         </div>
-        <div className='flex gap-4 items-center'>
+        <div className={`${theme==="dark" ? "text-white" : "text-black"} flex gap-4 items-center`}>
           <p>Home</p>
 
           <p>Saved</p>
