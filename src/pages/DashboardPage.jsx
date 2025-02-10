@@ -333,7 +333,6 @@ const Dashboard = () => {
         {/* trending bids section Here  */}
 
 
-
         <div className="mt-6">
           <h1 className="font-bold text-xl mb-4">Active Bids</h1>
           <div className="overflow-x-auto">
@@ -343,12 +342,12 @@ const Dashboard = () => {
                   <th className="p-3 text-left">
                     <input type="checkbox" className="w-5 h-5 cursor-pointer" />
                   </th>
-                  <th className="p-3 text-left">Item List</th>
-                  <th className="p-3 text-left">Open Price</th>
-                  <th className="p-3 text-left">Your Offer</th>
-                  <th className="p-3 text-left">Recent Offer</th>
-                  <th className="p-3 text-left">Time Left</th>
-                  <th className="p-3 text-left">Action</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Item List</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Open Price</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Your Offer</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Recent Offer</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Time Left</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -356,7 +355,7 @@ const Dashboard = () => {
 
                   <tr
                     key={index}
-                    className="navbar mt-12"
+                    className={`${theme === "dark" ? "navbar" : "bg-white"}mt-12`}
                   >
 
                     <td className="p-3">
@@ -369,17 +368,17 @@ const Dashboard = () => {
                         className="w-12 h-12 rounded-lg object-cover"
                       />
                       <div>
-                        <h3 className="text-white font-semibold">{nft.title}</h3>
+                        <h3 className={`${theme === "dark" ? "text-white" : "text-black"} font-semibold`}>{nft.title}</h3>
                         <p className="text-gray-400 text-sm">{nft.creator}</p>
                       </div>
                     </td>
-                    <td className="p-3 text-white font-medium">{nft.price}</td>
-                    <td className="p-3 text-white font-medium">{nft.bidPrice}</td>
+                    <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.price}</td>
+                    <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.bidPrice}</td>
                     <td className="p-3 flex items-center  space-x-3">
                       <img src={dp} alt="Bidder" className="w-8 h-8 rounded-full" />
-                      <p className="text-white font-medium">{nft.bidPrice}</p>
+                      <p className={`${theme === "dark" ? "text-white" : "text-black"} font-medium`}>{nft.bidPrice}</p>
                     </td>
-                    <td className="p-3 text-white  font-medium">{nft.timeLeft}</td>
+                    <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.timeLeft}</td>
                     <td className="p-3">
                       <button className="text-gray-400 hover:text-white transition-colors">
                         <X size={16} />
@@ -391,6 +390,7 @@ const Dashboard = () => {
             </table>
           </div>
         </div>
+
 
       </div>
     </>
