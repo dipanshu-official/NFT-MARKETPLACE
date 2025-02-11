@@ -28,7 +28,7 @@ const Layout = () => {
                     {/* ✅ Navigation Links - Always Visible */}
 
 
-                    <nav className="flex flex-row md:flex-col items-center md:gap-6 gap-4  w-full px-4 md:px-0">
+                    <nav className="flex flex-row md:flex-col justify-center items-center md:gap-6 gap-5  w-full px-4 md:px-0">
 
                         <NavLink
                             to="/"
@@ -145,7 +145,7 @@ const Layout = () => {
             {/* Main Content */}
             <main className={`flex-1 py-3  md:ml-20 ${theme === "dark" ? "bg-[#131129]" : "bg-[#F2F2F2]"}`}>
                 {/* Header */}
-                <header className="flex justify-between gap-     items-center mb-8 px-4 md:px-16">
+                <header className="flex justify-between items-center mb-8 px-4 md:px-16">
                     {/* Search Bar */}
                     <div className="flex w-full max-w-[300px] mb-0">
                         <div className="md:hidden block content-center ">
