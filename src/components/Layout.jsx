@@ -145,7 +145,7 @@ const Layout = () => {
             {/* Main Content */}
             <main className={`flex-1 py-3  md:ml-20 ${theme === "dark" ? "bg-[#131129]" : "bg-[#F2F2F2]"}`}>
                 {/* Header */}
-                <header className="flex justify-between gap-16 items-center mb-8 px-4 md:px-16">
+                <header className="flex justify-between gap-     items-center mb-8 px-4 md:px-16">
                     {/* Search Bar */}
                     <div className="flex w-full max-w-[300px] mb-0">
                         <div className="md:hidden block content-center ">
@@ -159,7 +159,7 @@ const Layout = () => {
                     </div>
 
                     {/* Right Icons */}
-                    <div className="flex items-center  w-full md:w-auto ">
+                    <div className="flex items-center justify-evenly w-full md:w-auto ">
                         
 
                         {/* Theme Toggle Button */}
