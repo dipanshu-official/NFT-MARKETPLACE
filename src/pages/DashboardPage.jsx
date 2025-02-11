@@ -22,6 +22,7 @@ import { X } from 'lucide-react';
 
 import NftCard from "../components/hero/NftCard.jsx";
 import { useTheme } from "../ThemeContext/ThemeContext.jsx";
+import Chart from "../components/Chart.jsx";
 
 const Dashboard = () => {
   const { theme, toggleTheme } = useTheme();
@@ -255,7 +256,7 @@ const Dashboard = () => {
             <div>
               <h1 className={`${theme === "dark" ? "text-white" : "text-black"}  font-bold`}>ETH Price</h1>
               <div className='navbar rounded-2xl mt-5'>
-                <img src={img4} alt="" className='w-full p-2 md:p-4 object-contain' />
+                <Chart/>
               </div>
             </div>
           </div>
