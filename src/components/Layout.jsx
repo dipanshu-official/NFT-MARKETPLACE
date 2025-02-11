@@ -10,7 +10,7 @@ const Layout = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className="flex min-h-screen flex-col md:flex-row">
+        <div className="flex h-screen flex-col md:flex-row">
             {/* Sidebar (Desktop: Left Sidebar, Mobile: Bottom Navbar) */}
             <div>
 
@@ -18,7 +18,7 @@ const Layout = () => {
                               md:w-20 md:h-screen md:fixed md:left-0 md:top-0 
                               flex flex-row md:flex-col justify-between md:justify-start items-center 
                               py-4 md:py-8 space-x-4 md:space-x-0 md:space-y-8 
-                              fixed bottom-0 left-0 right-0 w-full border-t border-gray-700 md:border-none z-50`}>
+                              fixed bottom-0 left-0 right-0 w-full  border-t border-gray-700 md:border-none z-50`}>
 
                     {/* ✅ Logo (Hidden on Mobile) */}
                     <div className="hidden md:block">
@@ -28,7 +28,7 @@ const Layout = () => {
                     {/* ✅ Navigation Links - Always Visible */}
 
 
-                    <nav className="flex flex-row md:flex-col items-center md:gap-6 gap-4  w-full px-4 md:px-0">
+                    <nav className="flex flex-row md:flex-col items-center justify-center md:gap-6 gap-4  w-full px-4 md:px-0">
 
                         <NavLink
                             to="/"

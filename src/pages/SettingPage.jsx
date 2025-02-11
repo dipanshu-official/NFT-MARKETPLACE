@@ -223,7 +223,7 @@ const SettingPage = () => {
                   </div>
 
                 </div>
-                <button className="btn-bg cursor-pointer text-white px-8 py-2 rounded-lg flex items-center gap-2  ">
+                <button className="btn-bg cursor-pointer mt-3 text-white px-8 py-2 rounded-lg flex items-center gap-2  ">
                   Save
                 </button>
               </div>

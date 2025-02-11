@@ -103,7 +103,7 @@ const BidPage = () => {
     },
   ]
   return (
-    <div className='max-w-screen-2xl mx-auto md:px-[70px] px-[20px]'>
+    <div className='max-w-screen-2xl mb-20 mx-auto md:px-[70px] px-[20px]'>
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>

@@ -22,7 +22,7 @@ const ProfilePage = () => {
   }));
 
   return (
-    <div className='max-w-screen-2xl mx-auto md:px-[70px] px-[20px]'>
+    <div className='max-w-screen-2xl mx-auto md:px-[70px] px-[20px] mb-20'>
 
 
       <div className='flex  items-center justify-between '>
