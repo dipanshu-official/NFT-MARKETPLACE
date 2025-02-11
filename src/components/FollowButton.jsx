@@ -21,7 +21,7 @@ export function FollowButton({ name, itemCount, imageUrl }) {
                         <p className="text-gray-400 text-sm">{itemCount} Items</p>
                     </div>
                     <div>
-                        <button className="  my-auto cursor-pointer  px-4  rounded-lg border border-blue-700 font-medium">
+                        <button className="  my-auto cursor-pointer  px-4  rounded-lg border border-[#6F4FF2]    font-medium">
                             <p className={`${theme === "dark" ? "text-white" : "text-black"} `}>follow</p>
                         </button>
                     </div>

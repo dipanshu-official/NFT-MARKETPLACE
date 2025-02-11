@@ -154,13 +154,13 @@ const Dashboard = () => {
       {/* Header Section */}
       <div className="min-h-screen md:px-[70px] px-[20px]">
 
-        <div className=" grid md:grid-cols-2 grid-cols-1 items-center gap-12  ">
+        <div className=" grid md:grid-cols-2 grid-cols-1 items-center gap-8  ">
           <div className="backgroundimg rounded-xl p-6">
             <div className=" ">
               <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-xs sm:max-w-sm md:max-w-md">
                 Discover, Collect, Sell and Create your NFT
               </h1>
-              <p className="text-xs sm:text-sm md:text-base text-gray-500 mt-3 max-w-xs sm:max-w-sm">
+              <p className="text-xs sm:text-sm md:text-base text-white mt-3 max-w-xs sm:max-w-sm">
                 Digital Marketplace for crypto collectibles and non-fungible tokens
               </p>
               <div className="flex  gap-3 mt-5">
@@ -184,38 +184,38 @@ const Dashboard = () => {
                 <img src={img} alt="NFT Display" className="w-auto rounded-2xl h-full   object-cover" />
               </div>
 
-              
-                {/* Content Section */}
-                <div className="flex flex-col justify-center  w-full">
-                  {/* Creator Info */}
-                  <div className="flex items-center gap-2">
-                    <img src={avtar} alt="Creator Avatar" className="w-8 h-8 rounded-full" />
-                    <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-sm sm:text-base font-semibold`}>John Abraham</h2>
-                  </div>
 
-                  {/* NFT Title */}
-                  <div className="mt-3 font-bold">
-                    <h1 className={`${theme === "dark" ? "text-white" : "text-black"} text-lg sm:text-xl`}>Brighten LQ</h1>
-                  </div>
+              {/* Content Section */}
+              <div className="flex flex-col justify-center  w-full">
+                {/* Creator Info */}
+                <div className="flex items-center gap-2">
+                  <img src={avtar} alt="Creator Avatar" className="w-8 h-8 rounded-full" />
+                  <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-sm sm:text-base font-semibold`}>John Abraham</h2>
+                </div>
 
-                  {/* Buttons */}
-                  <div className="flex  justify-center sm:justify-start mt-5 gap-4">
-                    <Btn color="primary">Place</Btn>
-                    <Btn color="danger">Details</Btn>
-                  </div>
+                {/* NFT Title */}
+                <div className="mt-3 font-bold">
+                  <h1 className={`${theme === "dark" ? "text-white" : "text-black"} text-lg sm:text-xl`}>Brighten LQ</h1>
+                </div>
+
+                {/* Buttons */}
+                <div className="flex  justify-center sm:justify-start mt-5 gap-4">
+                  <Btn color="primary">Place</Btn>
+                  <Btn color="danger">Details</Btn>
                 </div>
               </div>
+            </div>
           </div>
         </div>
 
 
         {/* Trending Bids Section */}
         < div className="flex justify-between items-center  mt-6 mb-8" >
-          <h2 className={`${theme === "dark" ? "text-white" : "text-black"} text-2xl font-bold`}>Trending Bids</h2>
+          <h2 className={`${theme === "dark" ? "text-white" : "text-black"} md:text-2xl text-lg font-bold`}>Trending Bids</h2>
           <div className="flex ">
-            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-2 py-1 rounded-full text-sm`}>All</button>
-            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-2 py-1 rounded-full text-sm`}>Artwork</button>
-            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-2 py-1 rounded-full text-sm`}>Book</button>
+            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-1 py-1 rounded-full text-xs`}>All</button>
+            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-1 py-1 rounded-full text-xs`}>Artwork</button>
+            <button className={`${theme === "dark" ? "text-white" : "text-black"} hover:bg-btn px-1 py-1 rounded-full text-xs`}>Book</button>
           </div>
         </div >
 
@@ -335,50 +335,50 @@ const Dashboard = () => {
         <div className="mt-6 md:mb-0 mb-25">
           <h1 className="font-bold text-xl mb-4">Active Bids</h1>
           <div className="overflow-x-auto">
-  <table className="w-full min-w-[850px] border-separate border-spacing-y-2">
-    <thead className="text-white">
-      <tr>
-        <th className="p-3 text-left">
-          <input type="checkbox" className="w-5 h-5 cursor-pointer" />
-        </th>
-        <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Item List</th>
-        <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Open Price</th>
-        <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Your Offer</th>
-        <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Recent Offer</th>
-        <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Time Left</th>
-        <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      {nftData.map((nft, index) => (
-        <tr key={index} className={`${theme==="dark" ? "navbar" : "bg-white"} border border-gray-300 rounded-3xl w-fix shadow-md overflow-hidden`}>
-          <td className="p-3 rounded-l-lg">
-            <input type="checkbox" className="w-5 h-5 cursor-pointer" />
-          </td>
-          <td className="p-3 flex items-center space-x-3">
-            <img src={nft.profile} alt={nft.title} className="w-12 h-12 rounded-lg object-cover" />
-            <div>
-              <h3 className={`${theme === "dark" ? "text-white" : "text-black"} font-semibold`}>{nft.title}</h3>
-              <p className="text-gray-400 text-sm">{nft.creator}</p>
-            </div>
-          </td>
-          <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.price}</td>
-          <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.bidPrice}</td>
-          <td className="p-3 flex items-center space-x-3">
-            <img src={dp} alt="Bidder" className="w-8 h-8 rounded-full" />
-            <p className={`${theme === "dark" ? "text-white" : "text-black"} font-medium`}>{nft.bidPrice}</p>
-          </td>
-          <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.timeLeft}</td>
-          <td className="p-3 rounded-r-lg">
-            <button className="text-gray-400 hover:text-white transition-colors">
-              <X size={16} />
-            </button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
+            <table className="w-full min-w-[850px] border-separate border-spacing-y-2">
+              <thead className="text-white">
+                <tr>
+                  <th className="p-3 text-left">
+                    <input type="checkbox" className="w-5 h-5 cursor-pointer" />
+                  </th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Item List</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Open Price</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Your Offer</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Recent Offer</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Time Left</th>
+                  <th className={`${theme === "dark" ? "text-white" : "text-black"} p-3 text-left`}>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {nftData.map((nft, index) => (
+                  <tr key={index} className={`${theme === "dark" ? "navbar" : "bg-white"} border border-gray-300 rounded-3xl  shadow-md overflow-hidden`}>
+                    <td className="p-3 rounded-l-lg">
+                      <input type="checkbox" className="w-5 h-5 cursor-pointer" />
+                    </td>
+                    <td className="p-3 flex items-center justify-center space-x-3">
+                      <img src={nft.profile} alt={nft.title} className="w-16 h-12 rounded- object-cover" />
+                      <div>
+                        <h3 className={`${theme === "dark" ? "text-white" : "text-black"} font-semibold`}>{nft.title}</h3>
+                        <p className="text-gray-400 text-sm">{nft.creator}</p>
+                      </div>
+                    </td>
+                    <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.price}</td>
+                    <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.bidPrice}</td>
+                    <td className="p-3 flex items-center space-x-3">
+                      <img src={dp} alt="Bidder" className="w-8 h-8 rounded-full" />
+                      <p className={`${theme === "dark" ? "text-white" : "text-black"} font-medium`}>{nft.bidPrice}</p>
+                    </td>
+                    <td className={`${theme === "dark" ? "text-white" : "text-black"} p-3 font-medium`}>{nft.timeLeft}</td>
+                    <td className="p-3 rounded-r-lg">
+                      <button className="text-white hover:text-gray-400  font-bold transition-colors">
+                        <X size={18} />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
         </div>
 

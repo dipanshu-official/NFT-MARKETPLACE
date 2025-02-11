@@ -10,7 +10,7 @@ const Layout = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className="flex h-screen flex-col md:flex-row">
+        <div className="flex min-h-screen flex-col md:flex-row">
             {/* Sidebar (Desktop: Left Sidebar, Mobile: Bottom Navbar) */}
             <div>
 
@@ -18,7 +18,7 @@ const Layout = () => {
                               md:w-20 md:h-screen md:fixed md:left-0 md:top-0 
                               flex flex-row md:flex-col justify-between md:justify-start items-center 
                               py-4 md:py-8 space-x-4 md:space-x-0 md:space-y-8 
-                              fixed bottom-0 left-0 right-0 w-full  border-t border-gray-700 md:border-none z-50`}>
+                              fixed bottom-0 left-0 right-0 w-full border-t border-gray-700 md:border-none z-50`}>
 
                     {/* ✅ Logo (Hidden on Mobile) */}
                     <div className="hidden md:block">
@@ -28,7 +28,7 @@ const Layout = () => {
                     {/* ✅ Navigation Links - Always Visible */}
 
 
-                    <nav className="flex flex-row md:flex-col items-center justify-center md:gap-6 gap-4  w-full px-4 md:px-0">
+                    <nav className="flex flex-row md:flex-col items-center md:gap-6 gap-4  w-full px-4 md:px-0">
 
                         <NavLink
                             to="/"
@@ -145,7 +145,7 @@ const Layout = () => {
             {/* Main Content */}
             <main className={`flex-1 py-3  md:ml-20 ${theme === "dark" ? "bg-[#131129]" : "bg-[#F2F2F2]"}`}>
                 {/* Header */}
-                <header className="flex justify-between items-center mb-8 px-4 md:px-16">
+                <header className="flex justify-between gap-16 items-center mb-8 px-4 md:px-16">
                     {/* Search Bar */}
                     <div className="flex w-full max-w-[300px] mb-0">
                         <div className="md:hidden block content-center ">
@@ -154,22 +154,25 @@ const Layout = () => {
                         <input
                             type="text"
                             placeholder="Search Here"
-                            className={`${theme === "dark" ? "navbar" : "bg-white"} pl-5 placeholder-gray-600 pr-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2zzzz focus:ring-purple-500 bg-gray-800 ml-2 ${theme === "dark" ? "text-white" : "text-black"}`}
+                            className={`${theme === "dark" ? "navbar" : "bg-white"} pl-5 placeholder-gray-600 pr-6   py-2 rounded-lg w-full focus:outline-none focus:ring-2zzzz focus:ring-purple-500 bg-gray-800 ml-2 ${theme === "dark" ? "text-white" : "text-black"}`}
                         />
                     </div>
 
                     {/* Right Icons */}
-                    <div className="flex items-center space-x-2 md:space-x-4 w-full md:w-auto justify-between md:justify-start">
-                        <button className="p-2 text-gray-400 hover:text-white">
-                            <FiBell size={20} />
-                        </button>
+                    <div className="flex items-center  w-full md:w-auto ">
+                        
 
                         {/* Theme Toggle Button */}
                         <button
                             onClick={toggleTheme}
                             className="p-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full"
                         >
-                            {theme === 'dark' ? <FiMoon size={20} /> : <FiSun size={20} />}
+                            {theme === 'dark' ? <FiMoon size={16} /> : <FiSun size={16} />}
+                        </button>
+
+
+                        <button className="p-2 text-gray-400 hover:text-white">
+                            <FiBell size={16} />
                         </button>
 
                         {/* ✅ Profile Picture (Always Visible in Sidebar) */}
