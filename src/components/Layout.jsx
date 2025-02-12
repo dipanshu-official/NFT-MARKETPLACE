@@ -28,7 +28,7 @@ const Layout = () => {
                     {/* ✅ Navigation Links - Always Visible */}
 
 
-                    <nav className="flex flex-row md:flex-col justify-center items-center md:gap-6 gap-5  w-full px-4 md:px-0">
+                    <nav className="flex flex-row md:flex-col justify-center items-center md:gap-6 gap-5                                                                                                                      w-full px-4 md:px-0">
 
                         <NavLink
                             to="/"
@@ -159,8 +159,9 @@ const Layout = () => {
                     </div>
 
                     {/* Right Icons */}
-                    <div className="flex items-center justify-evenly w-full md:w-auto ">
+                    <div className="flex items-center justify-between w-full md:w-auto ">
                         
+                        <div style={{flex:1}}></div>
 
                         {/* Theme Toggle Button */}
                         <button

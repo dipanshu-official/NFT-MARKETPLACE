@@ -15,6 +15,7 @@ import nft3 from '../assets/Dashboard/TrendingBids/NFT3.png'
 import nft4 from '../assets/Dashboard/TrendingBids/NFT4.png'
 import nft5 from '../assets/Dashboard/TrendingBids/NFT5.png'
 import dp from '../assets/Dashboard/TrendingBids/avatar.png'
+import CircleChart from "../components/CircleChart.jsx";
 
 
 import { FollowButton } from '../components/FollowButton'
@@ -265,7 +266,7 @@ const Dashboard = () => {
             <div>
               <h1 className={`${theme === "dark" ? "text-white" : "text-black"}  font-bold`}>Statistics</h1>
               <div className='navbar rounded-2xl mt-5'>
-                <img src={img5} alt="" className='w-full px-3 md:px-5 pt-2 md:pt-3 pb-8 md:pb-12 object-contain' />
+                <CircleChart/>                                                  
               </div>
             </div>
           </div>
